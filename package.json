@@ -1,0 +1,34 @@
+{
+  "name": "nostra-ecommerce",
+  "version": "1.0.0",
+  "description": "this is Namaste react from Sudheesh",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sudheeesh/namaste-react.git"
+  },
+  "author": "Sudheesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sudheeesh/namaste-react/issues"
+  },
+  "homepage": "https://github.com/sudheeesh/namaste-react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "0.11.10"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.23.1"
+  },
+  "browerlist": [
+    "last 2 version"
+  ]
+}
