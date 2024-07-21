@@ -18,8 +18,11 @@
   },
   "homepage": "https://github.com/sudheeesh/namaste-react#readme",
   "devDependencies": {
+    "autoprefixer": "^10.4.19",
     "parcel": "^2.12.0",
-    "process": "0.11.10"
+    "postcss": "8.1",
+    "process": "0.11.10",
+    "tailwindcss": "^3.4.4"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

@@ -1,26 +1,14 @@
-import { useEffect, useState } from "react"
-import { Menu_URL } from "../utilities/mocobot"
+
 import Shimmer from "./Shimmer"
 import { useParams } from "react-router-dom"
+import useRestaurantMenu from "../utilities/useRestaurantMenu"
 
 
 const RestaurantMenu = () => {
-
-    const [resInfo, SetResInfo] = useState(null)
     
     const { resId } = useParams()
     
-
-    useEffect(() => {
-        fetchMenu()
-    },[])
-     
-    const fetchMenu = async () => {
-        const response = await fetch(Menu_URL + resId)
-        const json = await response.json()
-        console.log(json)   
-        SetResInfo(json)
-    };
+    const resInfo = useRestaurantMenu(resId)
 
     if (resInfo === null) return <Shimmer/>
    

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import Shimmer from "./Shimmer"
 import { Food_URL } from "../utilities/mocobot"
 import { Link } from "react-router-dom"
+import useOnlineStatus from "../utilities/useOnlineStatus"
 
 
 const Body = () => {
@@ -23,6 +24,11 @@ const Body = () => {
       setListofRestaurant(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
       setFilteredRes(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
      }
+
+     const OnlineStatus = useOnlineStatus()
+
+     if( OnlineStatus=== false) return (<h1 className="online">You Have Poor internet Connection Check The Network Come Soon!!!!!</h1>)
+
 
      if(listofRestaurant.length === 0 ) {
       return <Shimmer/>
@@ -52,11 +58,11 @@ const Body = () => {
             Top Rated Restaurant
          </button>
        </div>
-        <div className="res">
+        <div className="flex-wrap">
        {
           filteredRes?.map((restaurant,id) => (
-           <Link to={"./restaurants/" + restaurant.info.id}> 
-           <Restaurant key={id} resData={restaurant}/></Link>
+           <Link key={id} to={"./restaurants/" + restaurant.info.id}> 
+           <Restaurant resData={restaurant}/></Link>
            ) )
        } 
         </div>
