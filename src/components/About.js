@@ -3,8 +3,7 @@ import User from "./User"
 
     return(
         <div className="p-40 bg-slate-300">
-            <h1>This the best food app around the world</h1>
-            <User/>
+            <h3>Better Food For More People</h3>
         </div>
          )
        
