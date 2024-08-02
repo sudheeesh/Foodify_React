@@ -4,6 +4,7 @@ import Shimmer from "./Shimmer"
 import { Food_URL } from "../utilities/mocobot"
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../utilities/useOnlineStatus"
+import Footer from "./Footer"
 
 
 const Body = () => {
@@ -20,10 +21,9 @@ const Body = () => {
      const fetchData = async () => {
       const response = await fetch(Food_URL)
       const json = await response.json()
-      console.log(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
-      setListofRestaurant(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
-      setFilteredRes(json?.data?.success?.cards[3]?.gridWidget?.gridElements?.infoWithStyle?.restaurants)
-     }
+      setListofRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+      setFilteredRes(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    }
 
      const OnlineStatus = useOnlineStatus()
 
@@ -35,30 +35,31 @@ const Body = () => {
      }
    
     return(
-       <div className="container">
-       <div className="filter">
-         <div className="search">
+       <div className="p-10 bg-slate-300 bg-[url('https://cdn.pixabay.com/photo/2018/08/22/13/58/grapes-3623694_1280.jpg')] bg-cover w-full h-full bg-no-repeat">
+       <div className="flex justify-between">
+         <div>
             <input type="text" 
-            className="searchName" 
+            className=" rounded-md shadow-slate-500 text-xl py-1" 
             value={searchtext} 
             onChange={(e) =>
             setSearchtext(e.target.value)}/>
-            <button className="searchbtn" onClick={() =>{
+            <button className="px-7 bg-lime-400 caret-violet-50 border-none text-2xl ml-6 rounded-lg font-medium font-serif hover:text-cyan-300 hover:bg-slate-200" onClick={() =>{
               const filteredItems = listofRestaurant.filter((res) =>res.info.name.toLowerCase().includes(searchtext.toLowerCase()))
               setFilteredRes(filteredItems)
             }}>Search</button>
          </div>
 
-         <button className="filter-btn" onClick={() => {
+         <button className="w-1/5 max-w-52 px-1 py-2 text-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-md font-medium font-serif hover:bg-slate-100" onClick={() => {
             const filtered = listofRestaurant.filter(
                (res) => res.info.avgRating >4
             )
          setFilteredRes(filtered)
+         console.log(setFilteredRes)
          }}>
             Top Rated Restaurant
          </button>
        </div>
-        <div className="flex-wrap">
+        <div className="flex flex-wrap">
        {
           filteredRes?.map((restaurant,id) => (
            <Link key={id} to={"./restaurants/" + restaurant.info.id}> 

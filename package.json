@@ -3,24 +3,22 @@
   "version": "1.0.0",
   "description": "this is Namaste react from Sudheesh",
   "scripts": {
-    "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "start": " parcel index.html",
+    "build": " parcel build index.html",
     "test": "jest"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sudheeesh/namaste-react.git"
+    "url": "https://github.com/sudheeesh/Foodify_React.git"
   },
   "author": "Sudheesh",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sudheeesh/namaste-react/issues"
+    "url": "https://github.com/sudheeesh/Foodify_React/issues"
   },
-  "homepage": "https://github.com/sudheeesh/namaste-react#readme",
+  "homepage": "https://github.com/sudheeesh/Foodify_React#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
     "parcel": "^2.12.0",
-    "postcss": "8.1",
     "process": "0.11.10",
     "tailwindcss": "^3.4.4"
   },
