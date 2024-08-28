@@ -5,7 +5,7 @@ const Footer = () => {
 
 
     return(
-        <div className="bg-black text-white w-full flex justify-around p-14 "> 
+        <div className="bg-black text-white w-full flex justify-around p-14  mt-10"> 
         <div>
           <h1 className="font-serif text-2xl font-bold cursor-pointer hover:text-cyan-600">Jumba Foods</h1>
           <p className="mt-1">© 2024-All Right Reserved</p>
