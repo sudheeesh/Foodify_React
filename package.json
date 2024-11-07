@@ -17,10 +17,18 @@
     "url": "https://github.com/sudheeesh/Foodify_React/issues"
   },
   "homepage": "https://github.com/sudheeesh/Foodify_React#readme",
+  
   "devDependencies": {
+
     "@babel/plugin-transform-optional-chaining": "^7.24.8",
     "parcel-bundler": "^1.12.3",
     "process": "0.11.10"
+
+    "parcel": "^2.12.0",
+    "parcel-bundler": "^1.12.5",
+    "process": "0.11.10",
+    "tailwindcss": "^3.4.4"
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

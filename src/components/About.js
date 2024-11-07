@@ -1,5 +1,3 @@
-
-
 const data = [
     {
         name : 'Customer comes First',
