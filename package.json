@@ -17,28 +17,18 @@
     "url": "https://github.com/sudheeesh/Foodify_React/issues"
   },
   "homepage": "https://github.com/sudheeesh/Foodify_React#readme",
-  
   "devDependencies": {
-
-    "@babel/plugin-transform-optional-chaining": "^7.24.8",
-    "parcel-bundler": "^1.12.3",
-    "process": "0.11.10"
-
     "parcel": "^2.12.0",
     "parcel-bundler": "^1.12.5",
     "process": "0.11.10",
     "tailwindcss": "^3.4.4"
-
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^7.0.39",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.23.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17"
+    "react-router-dom": "^6.23.1"
   },
   "browerlist": [
     "last 2 version"
