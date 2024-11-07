@@ -5,6 +5,7 @@ import { Food_URL } from "../utilities/mocobot"
 import { Link } from "react-router-dom"
 import useOnlineStatus from "../utilities/useOnlineStatus"
 import Footer from "./Footer"
+import React from "react"
 
 
 const Body = () => {
