@@ -33,14 +33,14 @@ const Header = () =>{
           <li className="hover:text-cyan-600"> <Link to="/contact">Contact</Link></li>
           <li className="hover:text-cyan-600"> <Link to="/grocery">Grocery</Link></li>
           <li className="hover:text-cyan-600"> <Link to="/cart">Cart</Link></li>
-         <Link to="/login"> <button className="mr-5 bg-pink-600 px-4 rounded-xl text-gray-300 hover:text-cyan-600 hover:bg-slate-100  " onClick={() => {
+         {/* <Link to="/login"> <button className="mr-5 bg-pink-600 px-4 rounded-xl text-gray-300 hover:text-cyan-600 hover:bg-slate-100  " onClick={() => {
             btnName==="Login" 
             ? SetBtnname("Logout")
             : SetBtnname("Login")
             }} >{btnName}
             </button>
-            </Link>
-            <li className="mr-5">{loggedInUser}</li>
+            </Link> */}
+            {/* <li className="mr-5">{loggedInUser}</li> */}
          </ul>
        </div>
       </div>
