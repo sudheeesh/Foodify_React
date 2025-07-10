@@ -3,19 +3,21 @@ import { useContext } from "react"
 import ReactDOM from "react-dom/client"
 import Header from "./components/Header"
 import Body from "./components/Body"
-import About from "./components/About"
-import Contact from "./components/Contact"
+import About from "./components/heading/About"
+import Contact from "./components/heading/Contact"
 import Error from "./components/Error"
-import Cart from "./components/Cart"
-import RestaurantMenu from "./components/RestaurantMenu"
+import Cart from "./components/cart/Cart"
+import RestaurantMenu from "./components/restaurantitems/RestaurantMenu"
 import { createBrowserRouter, RouterProvider,Outlet, useSearchParams }  from "react-router-dom"
 import UserContext from "./utilities/UserContext"
 import Footer from "./components/Footer"
 import Loginpage from "./components/Loginpage"
+import { Provider } from "react-redux"
+import appStore from "./utilities/appStore"
 
 // import Grocery from "./components/Grocery"
 
-const Grocery = lazy(() => import ("./components/Grocery"))
+const Grocery = lazy(() => import ("./components/heading/Grocery"))
 
 const AppLayout = () =>{
    
@@ -29,13 +31,15 @@ useEffect(() => {
 },[])
 
    return(
-      <UserContext.Provider value={{loggedInUser:username}}>
+      <Provider store={appStore}>
+         <UserContext.Provider value={{loggedInUser:username}}>
       <div className="">
         <Header/>
         <Outlet/>
         <Footer/>
       </div>
       </UserContext.Provider>
+      </Provider>
    )
 }
 
@@ -70,10 +74,10 @@ const appRouter = createBrowserRouter([
             element: <RestaurantMenu/>
           },
 
-          {
-            path:"/Login",
-            element:<Loginpage/>
-          }
+         //  {
+         //    path:"/Login",
+         //    element:<Loginpage/>
+         //  }
       ],
       errorElement:<Error/>
    },

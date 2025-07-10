@@ -1,4 +1,4 @@
-import Restaurant from "./Restaurant"
+import Restaurant from "./restaurantitems/Restaurant"
 import { useEffect, useState } from "react"
 import Shimmer from "./Shimmer"
 import { Food_URL } from "../utilities/mocobot"
@@ -55,7 +55,6 @@ const Body = () => {
                (res) => res.info.avgRating >4
             )
          setFilteredRes(filtered)
-         console.log(setFilteredRes)
          }}>
             Top Rated Restaurant
          </button>

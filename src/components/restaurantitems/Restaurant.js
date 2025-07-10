@@ -1,5 +1,5 @@
+import { IMG_URL } from "../../utilities/mocobot"
 
-import { IMG_URL } from "../utilities/mocobot"
 
 
 const Restaurant = (props) => {

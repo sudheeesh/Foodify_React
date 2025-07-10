@@ -36,8 +36,8 @@ const About = () => {
           </div>
         <div className="w-3/4 m-auto">
            <div className="mt-20">
-            {data.map((d) => (
-            <div className="bg-slate-200 shadow-lg h-60 text-black rounded-xl flex mb-5">
+            {data.map((d,index) => (
+            <div  key={index} className="bg-slate-200 shadow-lg h-60 text-black rounded-xl flex mb-5">
               <div className="flex flex-col gap-4 p-4">
                 <p className="text-2xl font-serif font-medium">{d.name}</p>
                 <p className="text-balance font-sans text-sm">{d.review}</p>
