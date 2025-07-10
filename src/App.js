@@ -13,6 +13,7 @@ import UserContext from "./utilities/UserContext"
 import Footer from "./components/Footer"
 import Loginpage from "./components/Loginpage"
 import { Provider } from "react-redux"
+import Payment from "./components/cart/payment";
 import appStore from "./utilities/appStore"
 
 // import Grocery from "./components/Grocery"
@@ -69,6 +70,8 @@ const appRouter = createBrowserRouter([
            path:"/cart",
            element: <Cart/>
          },
+         { path: "/payment", 
+          element: <Payment /> },
          {
             path:"/restaurants/:resId",
             element: <RestaurantMenu/>

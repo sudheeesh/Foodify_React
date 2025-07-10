@@ -1,4 +1,5 @@
-import { IMG_URL } from "../utilities/mocobot";
+import { IMG_URL } from "../../utilities/mocobot";
+
 
 const CartItemList = ({ items = []}) => {
   return (
